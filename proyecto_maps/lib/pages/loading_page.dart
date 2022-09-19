@@ -8,7 +8,7 @@ import 'mapa_page.dart';
 
 class LoadingPage extends StatefulWidget {
 
-  const LoadingPage ({ Key? key }) : super(key: key);
+  const LoadingPage ({ Key key }) : super(key: key);
 
   @override
   State<LoadingPage> createState() => _LoadingPageState();
@@ -18,14 +18,14 @@ class _LoadingPageState extends State<LoadingPage> with WidgetsBindingObserver{
 
    @override
    void initState() {
-    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
      super.initState();
      
    }
   @override
   void dispose() {
     // TODO: implement dispose
-    WidgetsBinding.instance!.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 

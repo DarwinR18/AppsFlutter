@@ -15,7 +15,7 @@ class MiUbicacionBloc extends Bloc<MiUbicacionEvent, MiUbicacionState> {
   //Instancia de geolocator para obtener posiciones
   final _geolocator = Geolocator();
 
-  StreamSubscription<Position> ?_positionSubscription;
+  StreamSubscription<Position> _positionSubscription;
 
   void iniciarSeguimiento() {
     //acceso a metodos para obtener assertions más proximas y cada 10m obtener positions

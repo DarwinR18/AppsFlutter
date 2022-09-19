@@ -3,7 +3,7 @@ import 'package:permission_handler/permission_handler.dart';
 
 class AccesoGpsPage extends StatefulWidget {
  
-  const AccesoGpsPage({ Key? key }) : super(key: key);
+  const AccesoGpsPage({ Key key }) : super(key: key);
 
   @override
   State<AccesoGpsPage> createState() => _AccesoGpsPageState();
@@ -14,14 +14,14 @@ class _AccesoGpsPageState extends State<AccesoGpsPage>  with WidgetsBindingObser
   //Estamos pendientes de los estados de la app con estos 3 métodos - inicializa - elimina y escucha
   @override
   void initState() {
-    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
     super.initState();
     
   }
   @override
   void dispose() {
     // TODO: implement dispose
-    WidgetsBinding.instance!.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 
