@@ -67,7 +67,7 @@ class _BuildMarcadorManual extends StatelessWidget {
           child: FadeIn(
             child: MaterialButton(
               minWidth: width-130,
-              child:Text('Confirmar Destino', 
+              child:Text('Confirmar ruta', 
                       style: TextStyle(color:Colors.white)
                     ),
               color: Colors.black,
@@ -84,6 +84,7 @@ class _BuildMarcadorManual extends StatelessWidget {
   }
 
   void calcularDestino(BuildContext context)async{
+    calculandoAlerta(context);
     final trafficService = TrafficService();
     final inicio = context.read<MiUbicacionBloc>().state.ubicacion;
     final destino = context.read<MapaBloc>().state.ubicacionCentral;
@@ -97,5 +98,8 @@ class _BuildMarcadorManual extends StatelessWidget {
       (point) => LatLng(point[0], point[1])
     ).toList();
     context.read<MapaBloc>().add(OnCrearRutaInicioDestino(rutaCords,distance, duration));
+
+    Navigator.of(context).pop();
+    context.read<BusquedaBloc>().add(OnDesactivarMarcadorManual());
   }
 }
