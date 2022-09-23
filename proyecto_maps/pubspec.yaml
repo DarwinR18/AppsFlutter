@@ -41,6 +41,9 @@ dependencies:
   dio: ^3.0.10
   animate_do: ^1.7.2
   polyline: ^1.0.2
+  rxdart: ^0.22.0
+  http: ^0.12.2
+  shared_preferences: 
 
 dev_dependencies:
   flutter_test:
